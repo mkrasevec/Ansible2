@@ -1,0 +1,50 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  # - name: Désinstallation des packages
+  #   shell:
+  #     cmd: apt-get purge {{item}}
+  #     loop:
+          # - git
+          # - nodejs
+          # - npm
+          # - apache2
+          # - docker-ce
+          # - docker-ce-cli
+          # - containerd.io
+          # - apt-transport-https
+          # - ca-certificates
+          # - wget
+          # - software-properties-common
+          # - gnupg2
+          # - curl
+          # - apt-transport-https
+          # - gnupg
+          # - lsb-release
+
+  - name: Désinstallation des packages
+    apt:
+      state: absent
+      name:
+        - git
+        - nodejs
+        - npm
+        - apache2
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - apt-transport-https
+        - ca-certificates
+        - wget
+        - software-properties-common
+        - gnupg2
+        - curl
+        - apt-transport-https
+        - gnupg
+        - lsb-release
+      
+      update_cache: yes
+
+      
