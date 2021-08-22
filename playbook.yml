@@ -16,4 +16,3 @@
     copy: 
       src: conf/
       dest: /
-
